@@ -1,26 +1,150 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* --- Colors --- */
+  --color-neutral-950: #000000;
+  --color-neutral-200: #E1E1E1;
+  --color-neutral-0: #FFFFFF;
+
+  --color-slate-500: #7D828F;
+  --color-slate-200: #C8CCD8;
+  --color-slate-100: #EEEFF4;
+
+  --color-zinc-900: #1B1D23;
+  --color-zinc-600: #60636D;
+
+  --color-red-500: #DF5656;
+  --color-stone-100: #EAE8E8;
+
+  /* --- Fonts --- */
+  --font-spartan: "League Spartan", sans-serif;
+
+  /* --- Typography Utility Presets (Text Presets) --- */
+  /* Text Preset 1 */
+  --text-preset-1: 250px;
+  --text-preset-1-line-height: 80%;
+  --text-preset-1-letter-spacing: -3px;
+
+  /* Text Preset 1 (Tablet) */
+  --text-preset-1-tablet: 120px;
+  --text-preset-1-tablet-line-height: 165%;
+  --text-preset-1-tablet-letter-spacing: -3px;
+
+  /* Text Preset 2 */
+  --text-preset-2: 96px;
+  --text-preset-2-line-height: 85%;
+  --text-preset-2-letter-spacing: -2px;
+
+  /* Text Preset 3 */
+  --text-preset-3: 72px;
+  --text-preset-3-line-height: 90%;
+  --text-preset-3-letter-spacing: -2px;
+
+  /* Text Preset 3 (Mobile) */
+  --text-preset-3-mobile: 48px;
+  --text-preset-3-mobile-line-height: 110%;
+  --text-preset-3-mobile-letter-spacing: -1.7px;
+
+  /* Text Preset 4 */
+  --text-preset-4: 32px;
+  --text-preset-4-line-height: 125%;
+  --text-preset-4-letter-spacing: 0px;
+
+  /* Text Preset 5 */
+  --text-preset-5: 20px;
+  --text-preset-5-line-height: 110%;
+  --text-preset-5-letter-spacing: -0.3px;
+
+  /* Text Preset 6 */
+  --text-preset-6: 18px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@utility button-custom {
+  background-color: var(--color-zinc-900);
+  color: var(--color-neutral-0);
+  padding: 1.5rem 2rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Custom Utility Classes for Typography Presets*/
+@utility font-preset-1 {
+  font-family: var(--font-spartan);
+  font-weight: 700;
+  font-size: var(--text-preset-1);
+  line-height: 80%;
+  letter-spacing: -5px;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@utility font-preset-1-tablet {
+  font-family: var(--font-spartan);
+  font-weight: 700;
+  font-size: 120px;
+  line-height: 165%;
+  letter-spacing: -3px;
+}
+
+@utility font-preset-2 {
+  font-family: var(--font-spartan);
+  font-weight: 700;
+  font-size: 96px;
+  line-height: 85%;
+  letter-spacing: -2px;
+}
+
+@utility font-preset-3 {
+  font-family: var(--font-spartan);
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 90%;
+  letter-spacing: -2px;
+}
+
+@utility font-preset-3-mobile {
+  font-family: var(--font-spartan);
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 110%;
+  letter-spacing: -1.7px;
+}
+
+@utility font-preset-4 {
+  font-family: var(--font-spartan);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 125%;
+  letter-spacing: 0px;
+}
+
+@utility font-preset-5 {
+  font-family: var(--font-spartan);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 110%;
+  letter-spacing: -0.3px;
+}
+
+@utility font-preset-6-bold {
+  font-family: var(--font-spartan);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: 0px;
+}
+
+@utility font-preset-6-medium {
+  font-family: var(--font-spartan);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 135%;
+  letter-spacing: 0px;
+}
+
+@utility font-preset-6-regular {
+  font-family: var(--font-spartan);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 135%;
+  letter-spacing: 18px;
 }
