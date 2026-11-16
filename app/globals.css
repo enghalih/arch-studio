@@ -63,9 +63,16 @@
   background-color: var(--color-zinc-900);
   color: var(--color-neutral-0);
   padding: 1.5rem 2rem;
-  display: flex;
+  display: inline-flex;
   gap: 1.5rem;
   align-items: center;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+
+  &:hover {
+    background-color: var(--color-slate-500);
+  }
 }
 
 /* Custom Utility Classes for Typography Presets*/
